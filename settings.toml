@@ -1,0 +1,7 @@
+WIFI_SSID = "<wifi-ssid>"
+WIFI_PASSWORD = "<wifi-password>"
+MQTT_BROKER ="<broker-ip/hostname>"
+MQTT_PORT = 1883
+MQTT_USERNAME = "<broker-username>"
+MQTT_PASSWORD = "<broker-password>"
+MQTT_TOPIC = "hometheater/ledstrip"
