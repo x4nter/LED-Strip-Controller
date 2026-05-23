@@ -3,13 +3,15 @@
 A Raspberry Pi Pico based wireless controller built using CircuitPython
 
 ## Part List
-- ***WS2815 LED Strip:*** 5m, 12V, 300 LEDs @ 60 LEDs/m, dual data signal ([Amazon Canada](https://www.amazon.ca/dp/B0F6CVHWVL?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)).
-- ***12V 5A Power Supply:*** 60W is more than enough to drive 300 LEDs and the Pico.
+- ***WS2815 LED Strip:*** 5m, 12V, 300 LEDs @ 60 LEDs/m, dual data signal ([Amazon Canada](https://www.amazon.ca/dp/B0F6CVHWVL?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)). Soldered 2 strips and cut to size to get 478 LEDs.
+- ***12V 10A Power Supply:*** Total measured power consumption is around 60W so this is more than enough.
 - ***Logic Level Shifter:*** Required to convert 3.3V GPIO signal to 5V that WS2815 uses. I used 74AHCT125.
 - ***5V Step-Down Voltage Regulator:*** Required to step-down 12V coming from the power supply to 5V to power the Pico. I used CN3903.
+- ***5V DC Relay Module:*** Required to turn off power when LEDs are off.
 
-## (a not so professional) Circuit Diagram
-<img width="720" height="420" alt="circuit" src="https://github.com/user-attachments/assets/61074e27-3ebf-49bc-8dc4-067d40dd6bd8" />
+## Circuit Diagram
+<img width="840" height="440" alt="circuit" src="https://github.com/user-attachments/assets/7a5ef1ae-4d8a-4957-a834-6dc4e6ce3930" />
+
 
 ## Usage
 - The controller listens to commands via MQTT packets. To serve as an MQTT broker, I have `mosquitto` running on my local Home Assistant server. The broker can be configured in the `settings.toml` file.
